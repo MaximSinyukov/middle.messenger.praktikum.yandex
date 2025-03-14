@@ -6,6 +6,23 @@ export default defineConfig({
   root: path.resolve(__dirname, './src'),
   publicDir: path.resolve(__dirname, './static'),
   base: '/',
+  build: {
+    outDir: path.resolve(__dirname, './dist'),
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/[name].js',
+        assetFileNames: (assetInfo) => {
+          if (/\.(css)$/.test(assetInfo.names[0])) {
+            return 'css/[name][extname]';
+          }
+
+          return 'assets/[name][extname]';
+        },
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
@@ -24,10 +41,17 @@ export default defineConfig({
     alias: {
       src: path.resolve(__dirname, './src'),
       vendor: path.resolve(__dirname, './src/vendor'),
-      components: path.resolve(__dirname, './src/components'),
-      modules: path.resolve(__dirname, './src/modules'),
-      pages: path.resolve(__dirname, './src/pages'),
       utils: path.resolve(__dirname, './src/utils'),
+
+      ui: path.resolve(__dirname, './src/ui'),
+      components: path.resolve(__dirname, './src/ui/components'),
+      modules: path.resolve(__dirname, './src/ui/modules'),
+      pages: path.resolve(__dirname, './src/ui/pages'),
+      styles: path.resolve(__dirname, './src/ui/styles'),
+
+      classes: path.resolve(__dirname, './src/classes'),
+      abstract: path.resolve(__dirname, './src/classes/abstract'),
+
       static: path.resolve(__dirname, './static'),
       svg: path.resolve(__dirname, './static/svg'),
     },
