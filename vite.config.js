@@ -43,11 +43,9 @@ export default defineConfig({
     alias: {
       src: path.resolve(__dirname, './src'),
       vendor: path.resolve(__dirname, './src/vendor'),
-      utils: path.resolve(__dirname, './src/utils'),
 
       ui: path.resolve(__dirname, './src/ui'),
       components: path.resolve(__dirname, './src/ui/components'),
-      modules: path.resolve(__dirname, './src/ui/modules'),
       pages: path.resolve(__dirname, './src/ui/pages'),
       styles: path.resolve(__dirname, './src/ui/styles'),
       'styles-variables': path.resolve(__dirname, './src/ui/styles/variables.scss'),
