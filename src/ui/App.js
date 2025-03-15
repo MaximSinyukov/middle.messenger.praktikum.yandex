@@ -1,5 +1,6 @@
 import Handlebars from "handlebars";
-// import * as Pages from 'pages';
+import * as Pages from 'pages';
+// import DemoLinks from 'modules/DemoLinks';
 
 export default class App {
   constructor() {
@@ -16,11 +17,12 @@ export default class App {
   // тут навешивать слушатели и смено рендера
 
   render() {
-    // const renderPage = new Pages[this.currentPage](this.appElement);
-    // renderPage.render();
-    this.attachEventListeners();
-    // let template = Handlebars.compile(Pages[this.currentPage]);
-    // this.appElement.innerHTML = template();
+    const renderPage = new Pages[this.currentPage](this.appElement);
+    renderPage.render();
+
+    // const linksTemplate = Handlebars.compile(DemoLinks);
+    // this.appElement.insertAdjacentElement('beforeend', linksTemplate());
+    // this.attachEventListeners();
   }
 
   _attachEventListeners() {

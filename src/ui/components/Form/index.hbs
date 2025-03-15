@@ -1,0 +1,16 @@
+<form
+class="form">
+  <h1
+  class="form__title">
+    {{title}}
+  </h1>
+
+  <ul
+  class="form__inputs-list">
+    {{#each inputs as |input|}}
+      {{> Input input}}
+    {{/each}}
+  </ul>
+
+  {{> SubmitButtonsBlock buttonsData}}
+</form>

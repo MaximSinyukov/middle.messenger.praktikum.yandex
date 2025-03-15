@@ -36,7 +36,9 @@ export default defineConfig({
   preview: {
     port: 3000,
   },
-  plugins: [handlebars()],
+  plugins: [
+    handlebars(),
+  ],
   resolve: {
     alias: {
       src: path.resolve(__dirname, './src'),
@@ -48,12 +50,13 @@ export default defineConfig({
       modules: path.resolve(__dirname, './src/ui/modules'),
       pages: path.resolve(__dirname, './src/ui/pages'),
       styles: path.resolve(__dirname, './src/ui/styles'),
+      'styles-variables': path.resolve(__dirname, './src/ui/styles/variables.scss'),
 
       classes: path.resolve(__dirname, './src/classes'),
       abstract: path.resolve(__dirname, './src/classes/abstract'),
 
       static: path.resolve(__dirname, './static'),
-      svg: path.resolve(__dirname, './static/svg'),
+      icons: path.resolve(__dirname, './static/icons'),
     },
   },
 });
