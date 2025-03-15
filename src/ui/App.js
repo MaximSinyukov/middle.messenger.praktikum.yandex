@@ -12,7 +12,7 @@ export default class App {
   // тут навешивать слушатели и смено рендера
 
   render() {
-    const renderPage = new Pages[this.currentPage](this.appElement);
+    const renderPage = new Pages[this.currentPage](this.appElement, 600); // TODO handle errorCode
     renderPage.render();
 
     // const linksTemplate = Handlebars.compile(DemoLinks);

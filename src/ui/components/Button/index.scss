@@ -12,11 +12,11 @@
 }
 
 .button--fill {
-  background-color: variables.$button-primary-background-color;
+  background-color: variables.$primary-color;
   color: variables.$button-text-color;
 }
 
 .button--text {
   background-color: transparent;
-  color: variables.$button-primary-text-color;
+  color: variables.$primary-color;
 }

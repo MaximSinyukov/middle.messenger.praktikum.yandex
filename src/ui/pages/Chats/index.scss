@@ -8,6 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: variables.$main-text-color;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .chat-list {

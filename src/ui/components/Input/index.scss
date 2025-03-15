@@ -30,17 +30,17 @@
 }
 
 .input-container__input--error {
-  border-bottom: 1px solid variables.$input-error-color;
+  border-bottom: 1px solid variables.$danger-color;
 }
 
 .input-container__input:focus {
   outline: none;
-  border-bottom: 1px solid variables.$input-active-border-color;
+  border-bottom: 1px solid variables.$primary-color;
 }
 
 .input-container__error {
   margin-top: 7px;
   font-size: 10px;
   line-height: 11px;
-  color: variables.$input-error-color;
+  color: variables.$danger-color;
 }
