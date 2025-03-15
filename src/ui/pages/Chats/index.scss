@@ -1,0 +1,20 @@
+@use 'styles-variables' as variables;
+
+.chats {
+  flex-direction: row;
+}
+
+.chats__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-list {
+  width: 24%;
+  border-right: 1px solid variables.$section-border-color;
+}
+
+.chat-messages {
+  flex-grow: 1;
+}

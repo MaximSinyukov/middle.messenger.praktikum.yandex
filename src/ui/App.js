@@ -4,7 +4,7 @@ import * as Pages from 'pages';
 
 export default class App {
   constructor() {
-    this.currentPage = 'Register';
+    this.currentPage = 'Chats';
     this.appElement = document.getElementById('app');
   }
 
