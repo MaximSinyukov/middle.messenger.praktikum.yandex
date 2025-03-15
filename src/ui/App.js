@@ -4,14 +4,9 @@ import * as Pages from 'pages';
 
 export default class App {
   constructor() {
-    this.currentPage = 'Login';
+    this.currentPage = 'Register';
     this.appElement = document.getElementById('app');
   }
-
-  // использовать мтеод рендер внутри класса компонента, там же будут его настройки и такой же метод рендер
-  // вызов класса элемента тут с прокидыванием в него компонента рутового
-  // const classes = { first: MyFirstClass, second: MySecondClass };
-  // const instance = new classes["first"]();
 
   // сделать ссылки на страницы прямо в html / стили прописать там же
   // тут навешивать слушатели и смено рендера

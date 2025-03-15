@@ -1,5 +1,5 @@
 import RenderComponent from "abstract/RenderComponent";
-import LoginTemplate from "pages/Login/index.hbs?raw";
+import LoginTemplate from "./index.hbs?raw";
 
 export default class Login extends RenderComponent {
   constructor(container) {
