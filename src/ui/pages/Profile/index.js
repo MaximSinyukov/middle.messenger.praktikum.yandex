@@ -3,6 +3,7 @@ import ProfileTemplate from "./index.hbs?raw";
 
 import formData from './utils/constants/form-data';
 import imageIcon from 'static/svg/image.svg';
+import arrowLeftIcon from 'static/svg/arrow-left.svg';
 
 export default class Profile extends RenderComponent {
   constructor(container) {
@@ -12,6 +13,14 @@ export default class Profile extends RenderComponent {
         isReadyForEdit: true,
       },
       formData: formData.default,
+      iconButton: {
+        type: 'button',
+        buttonClass: 'icon-button--primary',
+        icon: {
+          src: arrowLeftIcon,
+          alt: 'Стрелочка назад',
+        },
+      },
     });
   }
 

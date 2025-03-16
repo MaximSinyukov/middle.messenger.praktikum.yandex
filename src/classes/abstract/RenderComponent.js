@@ -1,10 +1,12 @@
 import Handlebars from "handlebars";
 import Button from "components/Button/index.js";
+import IconButton from "components/IconButton/index.js";
 import SubmitButtonsBlock from "components/SubmitButtonsBlock/index.js";
 import Input from "components/Input/index.js";
 import Form from "components/Form/index.hbs?raw";
 
 Handlebars.registerPartial('Button', Button);
+Handlebars.registerPartial('IconButton', IconButton);
 Handlebars.registerPartial('Input', Input);
 Handlebars.registerPartial('SubmitButtonsBlock', SubmitButtonsBlock);
 Handlebars.registerPartial('Form', Form);

@@ -1,0 +1,22 @@
+@use 'styles-variables' as variables;
+
+.icon-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button--primary {
+  background-color: variables.$primary-color;
+}
+
+.icon-button--danger {
+  background-color: variables.$danger-color;
+}
