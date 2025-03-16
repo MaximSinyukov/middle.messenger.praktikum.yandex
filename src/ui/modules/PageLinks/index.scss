@@ -1,0 +1,27 @@
+@use 'styles-variables' as variables;
+
+.page-links {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: 610px;
+  border: 1px solid variables.$container-border-color;
+  border-radius: 12px;
+}
+
+.page-links__link {
+  flex-grow: 1;
+  color: variables.$main-text-color;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 7px 0;
+}
+
+.page-links__link--active {
+  color: variables.$primary-color;
+}
