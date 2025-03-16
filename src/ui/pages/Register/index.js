@@ -11,33 +11,40 @@ export default class Register extends RenderComponent {
             title: 'Почта',
             typeInput: 'email',
             name: 'email',
+            placeholder: 'Почта',
           },
           {
             title: 'Логин',
             name: 'login',
+            placeholder: 'Почта',
           },
           {
             title: 'Имя',
             name: 'first_name',
+            placeholder: 'Имя',
           },
           {
             title: 'Фамилия',
             name: 'second_name',
+            placeholder: 'Фамилия',
           },
           {
             title: 'Телефон',
             typeInput: 'tel',
             name: 'phone',
+            placeholder: 'Телефон',
           },
           {
             title: 'Пароль',
             typeInput: 'password',
             name: 'password',
+            placeholder: 'Пароль',
           },
           {
             title: 'Пароль (ещё раз)',
             typeInput: 'password',
-            name: 'password',
+            name: 'passwordCheck',
+            placeholder: 'Пароль (ещё раз)',
           },
         ],
         buttonsData: {
@@ -50,7 +57,7 @@ export default class Register extends RenderComponent {
             },
             {
               type: 'button',
-              classes: 'button--text',
+              classes: 'button--text--active',
               title: 'Войти',
             },
           ],

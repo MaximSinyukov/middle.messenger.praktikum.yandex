@@ -11,7 +11,7 @@ export default `
     type="{{#if typeInput}}{{typeInput}}{{^}}text{{/if}}"
     name="{{name}}"
     id="{{name}}"
-    placeholder="{{title}}"
+    placeholder="{{placeholder}}"
     class="input-container__input {{inputClass}}"/>
 
     {{#if error}}

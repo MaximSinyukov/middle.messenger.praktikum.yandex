@@ -4,7 +4,7 @@ import * as Pages from 'pages';
 
 export default class App {
   constructor() {
-    this.currentPage = 'Chats';
+    this.currentPage = 'Profile';
     this.appElement = document.getElementById('app');
   }
 
@@ -12,7 +12,7 @@ export default class App {
   // тут навешивать слушатели и смено рендера
 
   render() {
-    const renderPage = new Pages[this.currentPage](this.appElement, 600); // TODO handle errorCode
+    const renderPage = new Pages[this.currentPage](this.appElement); // TODO handle errorCode
     renderPage.render();
 
     // const linksTemplate = Handlebars.compile(DemoLinks);

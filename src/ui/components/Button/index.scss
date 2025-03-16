@@ -16,7 +16,16 @@
   color: variables.$button-text-color;
 }
 
-.button--text {
+.button--text,
+.button--text--active,
+.button--text--danger {
   background-color: transparent;
+}
+
+.button--text--active {
   color: variables.$primary-color;
+}
+
+.button--text--danger {
+  color: variables.$danger-color;
 }

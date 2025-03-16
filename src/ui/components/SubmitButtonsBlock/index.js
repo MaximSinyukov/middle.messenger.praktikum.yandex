@@ -1,8 +1,10 @@
 export default `
-  <div
+  <ul
   class="btns-container {{blockClass}}">
     {{#each buttons as |button|}}
-      {{> Button button}}
+      <li>
+        {{> Button button}}
+      </li>
     {{/each}}
-  </div>
+  </ul>
 `;

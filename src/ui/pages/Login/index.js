@@ -10,11 +10,13 @@ export default class Login extends RenderComponent {
           {
             title: 'Логин',
             name: 'login',
+            placeholder: 'Логин',
           },
           {
             title: 'Пароль',
             typeInput: 'password',
             name: 'password',
+            placeholder: 'Пароль',
           },
         ],
         buttonsData: {
@@ -27,7 +29,7 @@ export default class Login extends RenderComponent {
             },
             {
               type: 'button',
-              classes: 'button--text',
+              classes: 'button--text--active',
               title: 'Нет профиля?',
             },
           ],

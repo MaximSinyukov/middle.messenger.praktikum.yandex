@@ -1,0 +1,100 @@
+@use 'styles-variables' as variables;
+
+.profile__form {
+  border: none;
+  width: 510px;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+
+.profile__title {
+  margin: 0;
+}
+
+.profile__input-list {
+  margin-top: 40px;
+}
+
+.profile__image-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$main-background;
+  position: relative;
+}
+
+.profile__image-shadow {
+  display: none;
+  cursor: pointer;
+  background-color: variables.$shadow-color;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.profile__image-shadow::after {
+  content: 'Поменять аватар';
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  color: variables.$inverted-text-color;
+}
+
+.profile__image-container:hover {
+  .profile__image-shadow {
+    display: block;
+  }
+}
+
+.profile__input {
+  text-align: right;
+  padding-left: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid variables.$section-border-color;
+  color: variables.$placeholder-color;
+}
+
+.profile__input:focus {
+  color: variables.$main-text-color;
+}
+
+.profile__label {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  color: variables.$main-text-color;
+}
+
+.profile__default-container {
+  margin-top: 86px;
+  align-self: flex-start;
+  width: max-content;
+  row-gap: 20px;
+}
+
+.profile__default-button {
+  padding: 0;
+  text-align: start;
+  height: auto;
+}
+
+.profile__edit-container {
+  margin-top: 81px;
+  width: 280px;
+}
