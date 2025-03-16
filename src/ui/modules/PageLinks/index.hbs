@@ -1,0 +1,11 @@
+<nav
+class="page-links">
+  {{#each links}}
+    <a
+    data-page="{{page}}"
+    data-page-attribute="{{attribute}}"
+    class="page-links__link {{#ifEquals page ../currentPage }}{{#ifEquals attribute ../currentAttribute }}page-links__link--active{{/ifEquals}}{{/ifEquals}}">
+      {{title}}
+    </a>
+  {{/each}}
+</nav>

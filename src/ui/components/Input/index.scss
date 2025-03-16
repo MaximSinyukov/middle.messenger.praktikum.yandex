@@ -1,0 +1,55 @@
+@use 'styles-variables' as variables;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.input-container__label {
+  font-size: 9px;
+  line-height: 10px;
+  color: variables.$placeholder-color;
+  margin-bottom: 1px;
+  transition: opacity .3s;
+}
+
+.input-container__input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid variables.$input-border-color;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 7px 0;
+  color: variables.$main-text-color;
+}
+
+.input-container:has(.input-container__input:not(:placeholder-shown)) {
+  label {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.input-container:has(.input-container__input:placeholder-shown) {
+  label {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.input-container__input--error {
+  border-bottom: 1px solid variables.$danger-color;
+}
+
+.input-container__input:focus:not([readonly]) {
+  border-bottom: 1px solid variables.$primary-color;
+}
+
+.input-container__error {
+  margin-top: 7px;
+  font-size: 10px;
+  line-height: 11px;
+  color: variables.$danger-color;
+}

@@ -1,0 +1,24 @@
+<main
+class="page page--centered profile">
+  <div
+  class="profile__image-container {{image.class}}">
+    <img
+    src="{{image.src}}"
+    alt="Иконка изображающая картинку профиля пользователя"
+    class="profile__image"/>
+
+
+    {{#if image.isReadyForEdit}}
+      <div
+      class="profile__image-shadow">
+      </div>
+    {{/if}}
+  </div>
+
+  {{> Form formData}}
+
+  <div
+  class="profile__prev-page">
+    {{> IconButton iconButton}}
+  </div>
+</main>

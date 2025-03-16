@@ -1,0 +1,18 @@
+@forward 'vendor/normalize.scss';
+@forward 'vendor/fonts/fonts.scss';
+
+@forward './core.scss';
+
+@forward 'components/Form/index.scss';
+@forward 'components/Input/index.scss';
+@forward 'components/Button/index.scss';
+@forward 'components/IconButton/index.scss';
+@forward 'components/SubmitButtonsBlock/index.scss';
+
+@forward 'modules/PageLinks/index.scss';
+
+@forward 'pages/Login/index.scss';
+@forward 'pages/Register/index.scss';
+@forward 'pages/Chats/index.scss';
+@forward 'pages/Error/index.scss';
+@forward 'pages/Profile/index.scss';

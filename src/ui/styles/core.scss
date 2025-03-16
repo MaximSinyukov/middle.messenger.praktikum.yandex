@@ -1,0 +1,27 @@
+:root {
+  font-family: system-ui, 'Inter', Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page--centered {
+  justify-content: center;
+  align-items: center;
+}

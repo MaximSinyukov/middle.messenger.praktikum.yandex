@@ -1,0 +1,20 @@
+<form
+class="form {{formClass}}">
+  {{#if title}}
+    <h1
+    class="form__title {{titleClass}}">
+      {{title}}
+    </h1>
+  {{/if}}
+
+  <ul
+  class="form__inputs-list  {{inputListClass}}">
+    {{#each inputs as |input|}}
+      {{> Input this=input inputClass=../allInputClass inputLabelClass=../allLabelClass readonly=../readonly}}
+    {{/each}}
+  </ul>
+
+  {{#if buttonsData}}
+    {{> SubmitButtonsBlock buttonsData}}
+  {{/if}}
+</form>
