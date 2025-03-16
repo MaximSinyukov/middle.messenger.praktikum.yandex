@@ -40,12 +40,13 @@ const submitButtonsData = {
   buttons: [
     {
       type: 'submit',
-      classes: 'button--fill',
+      classes: 'button--fill profile__button',
       title: 'Сохранить',
     },
     {
       type: 'button',
-      classes: 'button--text',
+      classes: 'button--text profile__button',
+      data: 'default',
       title: 'Отмена',
     },
   ],
@@ -55,23 +56,26 @@ export default {
   default: {
     ...inputBaseClasses,
     title: 'Иван',
+    readonly: true,
     inputs: inputsBase,
     buttonsData: {
       blockClass: 'profile__default-container',
       buttons: [
         {
           type: 'button',
-          classes: 'button--text--active profile__default-button',
+          classes: 'button--text--active profile__button profile__default-button',
+          data: 'edit',
           title: 'Изменить данные',
         },
         {
           type: 'button',
-          classes: 'button--text--active profile__default-button',
+          classes: 'button--text--active profile__button profile__default-button',
+          data: 'password',
           title: 'Изменить пароль',
         },
         {
           type: 'button',
-          classes: 'button--text--danger profile__default-button',
+          classes: 'button--text--danger profile__button profile__default-button',
           title: 'Выйти',
         },
       ],

@@ -55,13 +55,7 @@ export default class App {
     const renderPage = new Pages[this.currentPage](this.appElement, this.pageAttribute);
     renderPage.render();
 
-    const pageLinksTemplate = Handlebars.compile(PageLinks);
-    this.appElement.insertAdjacentHTML('beforeend', pageLinksTemplate({
-      ...linksData,
-      currentPage: this.currentPage,
-      currentAttribute: this.pageAttribute,
-    }));
-    this._attachEventListeners();
+    this._attachLinks();
   }
 
   _attachEventListeners() {
@@ -73,6 +67,28 @@ export default class App {
         this._changePage(evt.target.dataset.page, evt.target.dataset.pageAttribute);
       });
     });
+  }
+
+  _attachLinksRerender() {
+    const links = document.querySelectorAll('.profile__button');
+
+    links.forEach((link) => {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        this._attachLinks();
+      });
+    });
+  }
+
+  _attachLinks() {
+    const pageLinksTemplate = Handlebars.compile(PageLinks);
+    this.appElement.insertAdjacentHTML('beforeend', pageLinksTemplate({
+      ...linksData,
+      currentPage: this.currentPage,
+      currentAttribute: this.pageAttribute,
+    }));
+    this._attachEventListeners();
+    this._attachLinksRerender();
   }
 
   _changePage(pageName, pageAttribute) {

@@ -10,7 +10,7 @@ class="form {{formClass}}">
   <ul
   class="form__inputs-list  {{inputListClass}}">
     {{#each inputs as |input|}}
-      {{> Input this=input inputClass=../allInputClass inputLabelClass=../allLabelClass}}
+      {{> Input this=input inputClass=../allInputClass inputLabelClass=../allLabelClass readonly=../readonly}}
     {{/each}}
   </ul>
 

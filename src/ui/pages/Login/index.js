@@ -40,6 +40,6 @@ export default class Login extends RenderComponent {
 
 
   attachEventListeners() {
-    console.log('TODO everething is ok!');
+    console.log('TODO: create listeners in next sprint');
   }
 };

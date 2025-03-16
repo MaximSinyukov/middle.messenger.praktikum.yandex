@@ -71,6 +71,8 @@
 }
 
 .profile__label {
+  visibility: visible !important;
+  opacity: 1 !important;
   position: absolute;
   top: 7px;
   left: 0;

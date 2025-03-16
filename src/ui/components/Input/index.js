@@ -3,7 +3,7 @@ export default `
   class="input-container {{inputContainerClass}}">
     <label
     for="{{name}}"
-    class="input-container__label input-container__label--visible TODO {{inputLabelClass}}">
+    class="input-container__label {{inputLabelClass}}">
       {{title}}
     </label>
 
@@ -11,6 +11,7 @@ export default `
     type="{{#if typeInput}}{{typeInput}}{{^}}text{{/if}}"
     name="{{name}}"
     id="{{name}}"
+    {{#if readonly}}readonly{{/if}}
     placeholder="{{placeholder}}"
     class="input-container__input {{inputClass}}"/>
 
