@@ -2,7 +2,13 @@
 class="page chats">
   <section
   class="chats__section chat-list">
-    Да-да, тут когда то будут чаты...
+    {{> Button button}}
+
+    {{> Input }}
+
+    {{#each contacts as |contact|}}
+      {{> ContactItem }}
+    {{/each}}
   </section>
 
   <section
