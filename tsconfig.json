@@ -37,7 +37,7 @@
       "abstract/*": ["./src/classes/abstract/*"],
 
       "static/*": ["./static/*"],
-      "icons/*": ["./static/icons/*"],
+      "svg/*": ["./static/svg/*"],
     }
   },
   "include": [

@@ -1,0 +1,18 @@
+<section
+class="chats__section chats__list-section">
+  {{> Button button}}
+
+  <input
+  type="search"
+  name="chats"
+  id="chat-search-input"
+  placeholder="Поиск"
+  class="chats__search-input"/>
+
+  <ul
+  class="chats__chat-list">
+    {{#each contacts as |contact|}}
+      {{> ChatItem }}
+    {{/each}}
+  </ul>
+</section>

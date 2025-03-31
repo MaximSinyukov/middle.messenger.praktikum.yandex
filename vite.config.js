@@ -56,7 +56,7 @@ export default defineConfig({
       abstract: path.resolve(__dirname, './src/classes/abstract'),
 
       static: path.resolve(__dirname, './static'),
-      icons: path.resolve(__dirname, './static/icons'),
+      svg: path.resolve(__dirname, './static/svg'),
     },
   },
 });

@@ -4,19 +4,26 @@ import universalComponents from "components/index";
 import { TPartialComponentsArray } from "utils/constants/types";
 
 interface IRenderComponent {
-  settings?: object;
+  settings: object;
 }
 
 export default abstract class RenderComponent implements IRenderComponent {
   private readonly _container: HTMLElement;
   private readonly _content: string;
-  private _handlebarsPartials: TPartialComponentsArray;
-  public settings: object | undefined;
+  private readonly _handlebarsPartials: TPartialComponentsArray;
+  private readonly _additionPartials: TPartialComponentsArray | undefined;
+  public settings: object;
 
-  constructor(container: HTMLElement, content: string, settings?: object) {
+  constructor(
+    container: HTMLElement,
+    content: string,
+    settings: object,
+    additionPartials?: TPartialComponentsArray
+  ) {
     this._container = container;
     this._content = content;
     this._handlebarsPartials = universalComponents;
+    this._additionPartials = additionPartials;
     this.settings = settings;
   }
 
@@ -31,12 +38,13 @@ export default abstract class RenderComponent implements IRenderComponent {
 
   protected abstract attachEventListeners(): void;
 
-  protected addPagePartials?(pagePartials: TPartialComponentsArray): void {
-    this._handlebarsPartials = [...this._handlebarsPartials, ...pagePartials];
-  }
-
   private registerPartials() {
-    this._handlebarsPartials.forEach(({ name, component }) => {
+    const pagePartials = [
+      ...(this._additionPartials || []),
+      ...this._handlebarsPartials,
+    ];
+
+    pagePartials.forEach(({ name, component }) => {
       Handlebars.registerPartial(name, component);
     });
   }

@@ -1,15 +1,6 @@
 <main
 class="page chats">
-  <section
-  class="chats__section chat-list">
-    {{> Button button}}
-
-    {{> Input }}
-
-    {{#each contacts as |contact|}}
-      {{> ContactItem }}
-    {{/each}}
-  </section>
+  {{> ChatsSection }}
 
   <section
   class="chats__section chat-messages">

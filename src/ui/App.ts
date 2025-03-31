@@ -84,7 +84,7 @@ export default class App implements IApp {
   public pageAttribute: number | undefined;
 
   constructor() {
-    this.currentPage = PagesEnum.Login;
+    this.currentPage = PagesEnum.Chats;
     this.appElement = document.getElementById("app");
     this.pageAttribute = undefined;
   }
