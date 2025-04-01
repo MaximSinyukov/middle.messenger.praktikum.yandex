@@ -35,6 +35,7 @@
 
       "classes/*": ["./src/classes/*"],
       "abstract/*": ["./src/classes/abstract/*"],
+      "core/*": ["./src/classes/core/*"],
 
       "static/*": ["./static/*"],
       "svg/*": ["./static/svg/*"],

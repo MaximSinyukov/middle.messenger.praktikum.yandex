@@ -54,6 +54,7 @@ export default defineConfig({
 
       classes: path.resolve(__dirname, './src/classes'),
       abstract: path.resolve(__dirname, './src/classes/abstract'),
+      core: path.resolve(__dirname, './src/classes/core'),
 
       static: path.resolve(__dirname, './static'),
       svg: path.resolve(__dirname, './static/svg'),
