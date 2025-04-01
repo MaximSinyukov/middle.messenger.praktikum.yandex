@@ -1,5 +1,5 @@
 <section
-class="chats__section chats__list-section">
+class="chats__section chats__section--chat-list">
   {{> Button button}}
 
   <input
@@ -11,7 +11,7 @@ class="chats__section chats__list-section">
 
   <ul
   class="chats__chat-list">
-    {{#each contacts as |contact|}}
+    {{#each chatsList as |chat|}}
       {{> ChatItem }}
     {{/each}}
   </ul>

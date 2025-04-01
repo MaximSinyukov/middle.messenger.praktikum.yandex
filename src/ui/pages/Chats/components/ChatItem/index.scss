@@ -6,6 +6,7 @@
   width: 100%;
   padding: 12px 0;
   box-sizing: border-box;
+  cursor: pointer;
   border-top: 1px solid variables.$section-border-color;
 }
 
@@ -17,17 +18,7 @@
   overflow: hidden;
 }
 
-.chats__name {
-  margin: 0;
-  font-size: 13px;
-  line-height: 15px;
-  color: variables.$main-text-color;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.chats__message {
+.chats__message-preview {
   margin: 0;
   font-size: 12px;
   line-height: 14px;
@@ -53,6 +44,7 @@
   line-height: 11px;
   min-width: 20px;
   text-align: center;
+  color: variables.$placeholder-color;
 }
 
 .chats__message-counter {
