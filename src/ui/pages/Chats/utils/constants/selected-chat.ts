@@ -1,10 +1,10 @@
 import contextMenuIcon from "svg/context-menu.svg";
+import attachIcon from "svg/attach.svg";
+import longRightIcon from "svg/long-right-arrow.svg";
 
 import exampleImage from "static/images/example-image.png";
 
 export default {
-  chatImage: "",
-  chatName: "Жмышенко В.А.",
   chatData: [
     {
       date: "19 июня",
@@ -147,12 +147,34 @@ export default {
       ],
     },
   ],
-  menuSettings: {
-    buttonClass: "chats__context-menu",
-    icon: {
+  chatHeaderSettings: {
+    chatImage: "",
+    chatName: "Жмышенко В.А.",
+    menuSettings: {
+      buttonClass: "chats__context-menu",
+      icon: {
+        type: "button",
+        src: contextMenuIcon,
+        alt: "Иконка контекстного меню",
+      },
+    },
+  },
+  chatFooterSettings: {
+    attachButton: {
       type: "button",
-      src: contextMenuIcon,
-      alt: "Иконка контекстного меню",
+      buttonClass: "chats__attach-button",
+      icon: {
+        src: attachIcon,
+        alt: "Иконка скрепки",
+      },
+    },
+    submitButton: {
+      type: "submit",
+      buttonClass: "icon-button--primary chats__submit-button",
+      icon: {
+        src: longRightIcon,
+        alt: "Иконка стрелочки вправо",
+      },
     },
   },
 };

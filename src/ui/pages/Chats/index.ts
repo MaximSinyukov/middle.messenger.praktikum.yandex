@@ -3,17 +3,20 @@ import ChatsTemplate from "./index.hbs?raw";
 import chatsComponents from "./components/index";
 
 import arrowRightIcon from "svg/arrow-right.svg";
+
 import chatsList from "./utils/constants/chats-list";
 import selectedChat from "./utils/constants/selected-chat";
 
 const ChatsData = {
-  button: {
-    type: "button",
-    classes: "button--text chats__profile-button",
-    title: "Профиль",
-    iconSrc: arrowRightIcon,
+  chatsContainer: {
+    profileButton: {
+      type: "button",
+      classes: "button--text chats__profile-button",
+      title: "Профиль",
+      iconSrc: arrowRightIcon,
+    },
+    chatsList,
   },
-  chatsList,
   selectedChat,
 };
 

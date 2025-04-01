@@ -42,3 +42,16 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+.chats__chat-footer,
+.chats__chat-header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  min-height: max-content;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
