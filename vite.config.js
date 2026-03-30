@@ -43,6 +43,7 @@ export default defineConfig({
     alias: {
       src: path.resolve(__dirname, './src'),
       vendor: path.resolve(__dirname, './src/vendor'),
+      utils: path.resolve(__dirname, './src/utils'),
 
       ui: path.resolve(__dirname, './src/ui'),
       components: path.resolve(__dirname, './src/ui/components'),
@@ -53,9 +54,10 @@ export default defineConfig({
 
       classes: path.resolve(__dirname, './src/classes'),
       abstract: path.resolve(__dirname, './src/classes/abstract'),
+      core: path.resolve(__dirname, './src/classes/core'),
 
       static: path.resolve(__dirname, './static'),
-      icons: path.resolve(__dirname, './static/icons'),
+      svg: path.resolve(__dirname, './static/svg'),
     },
   },
 });

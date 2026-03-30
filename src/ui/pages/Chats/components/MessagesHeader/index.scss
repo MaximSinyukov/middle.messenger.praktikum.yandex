@@ -1,0 +1,9 @@
+@use 'styles-variables' as variables;
+
+.chats__chat-header {
+  border-bottom: 1px solid variables.$section-border-color;
+}
+
+.chats__context-menu {
+  margin-left: auto;
+}

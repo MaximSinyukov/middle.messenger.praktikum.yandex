@@ -1,0 +1,43 @@
+<li
+class="chats__chat-item">
+  <div
+  class="chats__image-container">
+    {{#if chatImage}}
+      <img
+      src="{{chatImage}}"
+      alt="Картинка чата"
+      class="chats__image"/>
+    {{/if}}
+  </div>
+
+  <div
+  class="chats__info">
+    <h4
+    class="chats__name">
+      {{chatName}}
+    </h4>
+
+    <p
+    class="chats__message-preview">
+      {{lastMessage.text}}
+    </p>
+  </div>
+
+  <div
+  class="chats__addition-info">
+    <span
+    class="chats__date-time">
+      {{lastMessage.time}}
+    </span>
+
+    {{#if unreadMessages}}
+      <div
+      class="chats__message-counter">
+        <span
+        class="chats__count">
+          {{unreadMessages}}
+        </span>
+      </div>
+    {{/if}}
+  </div>
+</li>

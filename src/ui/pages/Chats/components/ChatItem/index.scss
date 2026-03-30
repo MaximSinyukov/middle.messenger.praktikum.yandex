@@ -1,0 +1,65 @@
+@use 'styles-variables' as variables;
+
+.chats__chat-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 12px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-top: 1px solid variables.$section-border-color;
+}
+
+.chats__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 4px;
+  overflow: hidden;
+}
+
+.chats__message-preview {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: variables.$placeholder-color;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.chats__addition-info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chats__date-time {
+  margin-bottom: auto;
+  font-size: 9px;
+  line-height: 11px;
+  min-width: 20px;
+  text-align: center;
+  color: variables.$placeholder-color;
+}
+
+.chats__message-counter {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: variables.$primary-color;
+}
+
+.chats__count {
+  font-size: 11px;
+  line-height: 13px;
+  color: variables.$inverted-text-color;
+}

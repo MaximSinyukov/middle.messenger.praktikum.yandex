@@ -1,0 +1,45 @@
+<section
+class="chats__section chats__section--messages">
+  {{> MessagesHeader chatHeaderSettings }}
+
+  <div
+  class="chats__messages-container">
+    {{#if chatData}}
+      {{#each chatData as |day|}}
+        {{#each day.messages as |message|}}
+          <div
+          class="chats__message {{#if isMyMessage}}chats__message--user{{/if}}">
+            {{#if message.text }}
+            <p
+            class="chats__text-message">
+              {{message.text}}
+            </p>
+            {{else}}
+            <img
+            class="chats__image-message"
+            src="{{message.image}}"
+            alt="Картинка от пользователя"/>
+            {{/if}}
+
+            <span
+            class="chats__time-message">
+              {{message.time}}
+            </span>
+          </div>
+        {{/each}}
+
+        <h4
+        class="chats__date">
+          {{day.date}}
+        </h4>
+      {{/each}}
+    {{^}}
+      <h3
+      class="chats__empty-messages">
+        Выберите чат чтобы отправить сообщение
+      </h3>
+    {{/if}}
+  </div>
+
+  {{> MessagesFooter chatFooterSettings }}
+</section>

@@ -1,0 +1,19 @@
+<div
+class="chats__chat-header">
+  <div
+  class="chats__image-container">
+    {{#if chatImage}}
+      <img
+      src="{{chatImage}}"
+      alt="Картинка чата"
+      class="chats__image"/>
+    {{/if}}
+  </div>
+
+  <h3
+  class="chats__name">
+    {{chatName}}
+  </h3>
+
+  {{> IconButton menuSettings }}
+</div>

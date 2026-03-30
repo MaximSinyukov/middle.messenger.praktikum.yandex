@@ -9,6 +9,11 @@
   border-radius: 8px;
   font-size: 13px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
 }
 
 .button--fill {
@@ -20,6 +25,8 @@
 .button--text--active,
 .button--text--danger {
   background-color: transparent;
+  width: max-content;
+  height: max-content;
 }
 
 .button--text--active {
@@ -28,4 +35,8 @@
 
 .button--text--danger {
   color: variables.$danger-color;
+}
+
+.button__icon {
+  margin-left: 8px;
 }

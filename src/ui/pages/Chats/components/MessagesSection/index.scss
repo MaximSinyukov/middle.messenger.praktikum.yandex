@@ -1,0 +1,76 @@
+@use 'styles-variables' as variables;
+
+.chats__section--messages {
+  width: 76%;
+}
+
+.chats__messages-container {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+.chats__date {
+  font-size: 12px;
+  line-height: 14px;
+  color: variables.$placeholder-color;
+  align-self: center;
+  margin: 30px 0;
+}
+
+.chats__message {
+  max-width: 40%;
+  align-self: flex-start;
+  background-color: variables.$message-background;
+  border-radius: 8px;
+  text-align: start;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 10px;
+}
+
+.chats__message:last-of-type {
+  margin-top: 0;
+}
+
+.chats__message--user {
+  align-self: flex-end;
+  background-color: variables.$primary-background;
+
+  .chats__time-message {
+    color: variables.$primary-color;
+  }
+}
+
+.chats__text-message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 10px 20px 10px;
+  box-sizing: border-box;
+  color: variables.$main-text-color;
+}
+
+.chats__image-message {
+  object-fit: cover;
+  object-position: center;
+}
+
+.chats__time-message {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 9px;
+  line-height: 11px;
+  color: variables.$placeholder-color;
+}
+
+.chats__empty-messages {
+  font-size: 12px;
+  line-height: 14px;
+  color: variables.$placeholder-color;
+  margin: auto;
+}
